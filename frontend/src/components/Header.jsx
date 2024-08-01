@@ -4,7 +4,7 @@ function MainHeader() {
   const [headerText, setHeaderText] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/header")
+    fetch("https://fastvert.onrender.com/api/header")
       .then((response) => response.json())
       .then((data) => setHeaderText(data.text))
       .catch((err) => console.error("Error fetching header text:", err));

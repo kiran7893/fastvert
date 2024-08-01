@@ -9,7 +9,7 @@ export default function AdminPanel() {
     event.preventDefault(); // Prevent default form submission behavior
 
     // Make a POST request to update the header text
-    fetch("http://localhost:5000/api/header", {
+    fetch("https://fastvert.onrender.com/api/header", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -37,11 +37,11 @@ export default function AdminPanel() {
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder="Enter new header text"
-          className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+          className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
         />
         <button
           type="submit"
-          className="w-full bg-indigo-600 text-white font-bold py-2 px-4 rounded hover:bg-indigo-700 focus:outline-none focus:shadow-outline"
+          className="w-full bg-red-600 text-white font-bold py-2 px-4 rounded hover:bg-red-700 focus:outline-none focus:shadow-outline"
         >
           Update Header
         </button>
